@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>North Star Bakery | Products</title>
-<link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -31,6 +34,7 @@
     <main>
 
         <section>
+
             <h2>Breads</h2>
 
             <p>
@@ -39,9 +43,16 @@
             </p>
 
             <p>Typical price range: $4–$8</p>
+
+            <button class="favorite-button" data-product="bread">
+                ♡ Add to Favorites
+            </button>
+
         </section>
 
+
         <section>
+
             <h2>Pastries</h2>
 
             <p>
@@ -50,9 +61,16 @@
             </p>
 
             <p>Typical price range: $3–$6</p>
+
+            <button class="favorite-button" data-product="pastries">
+                ♡ Add to Favorites
+            </button>
+
         </section>
 
+
         <section>
+
             <h2>Cakes</h2>
 
             <p>
@@ -61,24 +79,53 @@
             </p>
 
             <p>Typical price range: $25–$60</p>
+
+            <button class="favorite-button" data-product="cakes">
+                ♡ Add to Favorites
+            </button>
+
         </section>
+
 
         <section>
 
             <h2>Our Signature Loaf</h2>
 
             <figure>
+
                 <img src="images/bakery-signature-loaf_c.png"
                      alt="North Star Bakery signature loaf">
+
                 <figcaption>
                     Our Signature Loaf is a freshly baked specialty
                     made for sharing.
                 </figcaption>
+
             </figure>
+
+            <button class="favorite-button" data-product="signature-loaf">
+                ♡ Add to Favorites
+            </button>
+
+        </section>
+
+
+        <section>
+
+            <h2>Your Favorites</h2>
+
+            <p>
+                Products you favorite will appear below.
+            </p>
+
+            <ul id="favorites-list">
+                <li>No favorite products yet.</li>
+            </ul>
 
         </section>
 
     </main>
+
 
     <footer>
 
