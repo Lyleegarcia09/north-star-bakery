@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>North Star Bakery | Contact</title>
-<link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -19,10 +22,10 @@
             <a href="index.html">Home</a>
             <a href="products.html">Our Products</a>
             <a href="about.html">About Us</a>
-            <a href="contact.html">Contact & Pre-Orders</a>
+            <a href="contact.html">Contact &amp; Pre-Orders</a>
         </nav>
 
-        <h1>Contact & Pre-Orders</h1>
+        <h1>Contact &amp; Pre-Orders</h1>
 
         <p>
             Have a question or want to request a pre-order?
@@ -31,44 +34,60 @@
 
     </header>
 
+
     <main>
 
         <section>
 
             <h2>Send Us a Request</h2>
 
-            <form action="#" method="post">
+            <form id="contact-form"
+                  action="#"
+                  method="post"
+                  onsubmit="return validateContactForm(event)">
 
                 <fieldset>
 
                     <legend>Contact Information</legend>
 
                     <label for="name">Name:</label>
+
                     <input
                         type="text"
                         id="name"
                         name="name"
                         required>
 
+                    <span id="name-error"
+                          class="error-message"></span>
+
+
                     <label for="email">Email:</label>
+
                     <input
-                        type="email"
+                        type="text"
                         id="email"
                         name="email"
                         required>
 
+                    <span id="email-error"
+                          class="error-message"></span>
+
                 </fieldset>
+
 
                 <fieldset>
 
                     <legend>Pre-Order Information</legend>
 
                     <label for="pickup-date">Pickup Date:</label>
+
                     <input
                         type="date"
                         id="pickup-date"
                         name="pickup-date"
                         required>
+
 
                     <label for="request-type">Request Type:</label>
 
@@ -78,12 +97,17 @@
                         required>
 
                         <option value="">Please select one</option>
-                        <option value="pre-order">Pre-Order</option>
+
+                        <option value="pre-order">
+                            Pre-Order
+                        </option>
+
                         <option value="general-question">
                             General Question
                         </option>
 
                     </select>
+
 
                     <label for="item-details">Item Details:</label>
 
@@ -91,6 +115,7 @@
                         id="item-details"
                         name="item-details"
                         required></textarea>
+
 
                     <label for="allergy-notes">Allergy Notes:</label>
 
@@ -100,15 +125,19 @@
 
                 </fieldset>
 
-                <input type="submit" value="Send Request">
+
+                <input
+                    type="submit"
+                    value="Send Request">
 
             </form>
 
         </section>
 
+
         <section>
 
-            <h2>Location & Hours</h2>
+            <h2>Location &amp; Hours</h2>
 
             <p>
                 Location: [Insert bakery address]
@@ -126,11 +155,14 @@
 
     </main>
 
+
     <footer>
 
         <p>&copy; 2026 North Star Bakery</p>
 
-        <p>Freshly baked, locally loved.</p>
+        <p>
+            Freshly baked, locally loved.
+        </p>
 
     </footer>
 
