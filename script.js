@@ -173,6 +173,8 @@ function renderFavorites() {
 // Validate the Contact & Pre-Orders form
 function validateContactForm(event) {
 
+    event.preventDefault();
+
     const form =
         document.getElementById("contact-form");
 
@@ -286,5 +288,16 @@ document.addEventListener(
 
         renderFavorites();
 
+        // Connect the contact form to the validation function
+        const contactForm =
+            document.getElementById("contact-form");
+
+        if (contactForm) {
+
+            contactForm.addEventListener(
+                "submit",
+                validateContactForm
+            );
+        }
     }
 );
